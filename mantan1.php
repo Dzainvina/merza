@@ -99,7 +99,7 @@ echo "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\e[31;1m ( BAND
         echo "\n".color("white","🔎 minta jatah terus ");
         for($a=1;$a<=3;$a++){
         echo color("purple",".");
-        sleep(20);
+        sleep(25);
         }
        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -113,7 +113,7 @@ echo "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\e[31;1m ( BAND
         echo "\n".color("white","🔎 manjanya kebangetan ");
         for($a=1;$a<=3;$a++){
         echo color("purple",".");
-        sleep(15);
+        sleep(20);
         }
        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -127,7 +127,7 @@ echo "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\e[31;1m ( BAND
         echo "\n".color("white","🔎 pernah 1 bantal.");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(10);
+        sleep(15);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -136,13 +136,13 @@ echo "\e[32;1m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\e[31;1m ( BAND
         echo "\n".color("white","🔎tukang cemburu");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
-        sleep(5);
+        sleep(10);
         }
         sleep(10);
-        $boba09 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
+        $boba09 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PAKEAMAN"}');
         $messageboba09 = fetch_value($boba09,'"message":"','"');
         echo "\n".color("blue","# Message: ".$messageboba09);
-        sleep(3);
+        sleep(5);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=13&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
         $voucher1 = getStr1('"title":"','",',$cekvoucher,"1");
